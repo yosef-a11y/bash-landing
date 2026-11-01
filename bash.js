@@ -7,13 +7,13 @@ var BASH_CONFIG = {
   ga4Id: 'G-XXXXXXXXXX',
 
   // Google Ads account tag, e.g. "AW-1234567890"
-  adsId: 'AW-XXXXXXXXXX',
+  adsId: 'AW-16698912782',
 
   // Conversion action labels from Google Ads (Goals > Conversions > the action > Tag setup).
   // The label is the part after the slash in "AW-1234567890/AbCdEfGhIj".
   labels: {
-    softServeLead: 'XXXXXXXXXX', // Lead form: Soft serve
-    tablesLead: 'XXXXXXXXXX',    // Lead form: Tables & chairs
+    softServeLead: 'P7eFCJLHvOgcEI7g1Jo-', // "Contact Us Submission" (both forms share it)
+    tablesLead: 'P7eFCJLHvOgcEI7g1Jo-',    // "Contact Us Submission"
     callClick: 'XXXXXXXXXX',     // Click-to-call on the site (secondary)
     websiteCall: 'XXXXXXXXXX'    // Calls from website (Google forwarding number, 60s+)
   },

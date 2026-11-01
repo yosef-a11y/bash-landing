@@ -125,6 +125,8 @@ on the soft serve side, but "ice cream catering near me" is good. Decide from re
 ## Tracking setup (step by step)
 
 ### 1. Fill in `BASH_CONFIG` in `bash.js`
+**Status (11/1):** `adsId` = AW-16698912782; both form labels = `P7eFCJLHvOgcEI7g1Jo-` ("Contact Us Submission"). Still empty: `ga4Id`, `callClick`, `websiteCall`, `web3formsKey`.
+
 | Key | Where to get it |
 | --- | --- |
 | `ga4Id` | GA4 → Admin → Data streams → web stream → Measurement ID |

@@ -17,7 +17,8 @@
     var type = new URLSearchParams(location.search).get('type') === 'tables' ? 'tables' : 'softserve';
     var done = null, ec = null;
     try { done = sessionStorage.getItem('bash_conv_done'); ec = JSON.parse(sessionStorage.getItem('bash_ec') || 'null'); } catch (e) {}
-    if (done) return;
+    // Count only right after a real form submit in this tab (bash.js sets bash_ec on submit).
+    if (done || !ec) return;
 
     // Enhanced Conversions: Google hashes these before sending.
     if (ec && (ec.email || ec.phone_number)) {
