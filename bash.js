@@ -24,6 +24,10 @@ var BASH_CONFIG = {
   // Web3Forms access key: get one at web3forms.com using the inbox that should receive leads.
   web3formsKey: 'YOUR_WEB3FORMS_ACCESS_KEY',
 
+  // Extra people to copy on every lead email, separated by ; (Web3Forms Pro only).
+  // On the free plan leave this empty and use a group address as the main inbox instead.
+  leadCc: '',
+
   // Shown on the pages to filter out small budgets. null hides the line entirely.
   // Numbers only, e.g. 650
   softServeStationFrom: null,
@@ -217,6 +221,11 @@ var BASH_CONFIG = {
     document.querySelectorAll('form.lead-form').forEach(function (form) {
       var type = form.getAttribute('data-type');
       form.querySelector('input[name="access_key"]').value = C.web3formsKey;
+      if (isSet(C.leadCc) && !form.querySelector('input[name="ccemail"]')) {
+        var cc = document.createElement('input');
+        cc.type = 'hidden'; cc.name = 'ccemail'; cc.value = C.leadCc;
+        form.appendChild(cc);
+      }
       var thanks = new URL('thank-you/?type=' + type, new URL('../', window.location.href));
       form.querySelector('input[name="redirect"]').value = thanks.href;
       KEYS.forEach(function (k) {
