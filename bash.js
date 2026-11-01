@@ -22,7 +22,7 @@ var BASH_CONFIG = {
   phoneTel: '+19549972251',
 
   // Web3Forms access key: get one at web3forms.com using the inbox that should receive leads.
-  web3formsKey: 'YOUR_WEB3FORMS_ACCESS_KEY',
+  web3formsKey: '32c46d1d-f8cc-42f9-a9ca-2eae19c99887',  // inbox: whoever created this key (bash-leads group)
 
   // Extra people to copy on every lead email, separated by ; (Web3Forms Pro only).
   // On the free plan leave this empty and use a group address as the main inbox instead.
