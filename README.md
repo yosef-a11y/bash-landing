@@ -125,7 +125,7 @@ on the soft serve side, but "ice cream catering near me" is good. Decide from re
 ## Tracking setup (step by step)
 
 ### 1. Fill in `BASH_CONFIG` in `bash.js`
-**Status (11/1):** `adsId` = AW-16698912782; both form labels = `P7eFCJLHvOgcEI7g1Jo-` ("Contact Us Submission"). Still empty: `ga4Id`, `callClick`, `websiteCall`, `web3formsKey`.
+**Status (11/1):** `adsId` = AW-16698912782; both form labels = `P7eFCJLHvOgcEI7g1Jo-` ("Contact Us Submission"). `ga4Id` = G-0ZP4CECD7L; `websiteCall` = `ALwKCIOL3bYbEI7g1Jo-` ("Call ((954) 997-2251)"). Still empty: `callClick` (optional), `web3formsKey`.
 
 | Key | Where to get it |
 | --- | --- |

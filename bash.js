@@ -4,7 +4,7 @@
 
 var BASH_CONFIG = {
   // Google Analytics 4 measurement ID, e.g. "G-ABC123XYZ"
-  ga4Id: 'G-XXXXXXXXXX',
+  ga4Id: 'G-0ZP4CECD7L',
 
   // Google Ads account tag, e.g. "AW-1234567890"
   adsId: 'AW-16698912782',
@@ -15,7 +15,7 @@ var BASH_CONFIG = {
     softServeLead: 'P7eFCJLHvOgcEI7g1Jo-', // "Contact Us Submission" (both forms share it)
     tablesLead: 'P7eFCJLHvOgcEI7g1Jo-',    // "Contact Us Submission"
     callClick: 'XXXXXXXXXX',     // Click-to-call on the site (secondary)
-    websiteCall: 'XXXXXXXXXX'    // Calls from website (Google forwarding number, 60s+)
+    websiteCall: 'ALwKCIOL3bYbEI7g1Jo-'  // "Call ((954) 997-2251)": calls from website, 60s+
   },
 
   phoneDisplay: '(954) 997-2251',
