@@ -62,7 +62,7 @@ Target CPA: **under $125**.
 - **Location:** Palm Beach, Broward, Miami-Dade counties. "Presence: people in or regularly in" only
 - **Final URL:** `/soft-serve/`
 - **Bidding:** Maximize Conversions to start. Move to Target CPA ~$110 after 30 conversions
-- **Ad groups** (each one's final URL sets the line above the headline to match the search):
+- **Ad groups** (each one's final URL sets the main headline to match the search):
   | Ad group | Keywords | Final URL |
   | --- | --- | --- |
   | Soft serve machine rental | soft serve ice cream machine rental, soft serve machine rental | `/soft-serve/?kw=soft-serve-machine` |
@@ -70,7 +70,7 @@ Target CPA: **under $125**.
   | Ice cream cart rental | ice cream cart rental, ice cream cart for party | `/soft-serve/?kw=cart` |
   | Soft serve ice cream machine | soft serve ice cream machine (watch search terms: many are buyers) | `/soft-serve/?kw=soft-serve` |
   | Corporate | corporate ice cream catering, ice cream for office party | `/soft-serve/` |
-  Only these preset `kw` values change the page. Anything else shows the default line.
+  Only these preset `kw` values change the page. Anything else shows the default headline.
 - **Ad copy angles:** "Served Inside Your Event", "Your Logo on Every Cup", "Kosher, ORB Certified",
   "Attendant Included". Sitelinks to #options, #events, #quote
 - **Assets:** call asset (with call reporting on), location asset, image assets once photos arrive
