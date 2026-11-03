@@ -119,6 +119,18 @@ var BASH_CONFIG = {
 
   document.addEventListener('DOMContentLoaded', function () {
 
+    /* On computers (mouse, no touch) a "Call to..." button can't place a call, so the
+       lower ones become form buttons. Phones and tablets keep calling. */
+    var desktop = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (desktop) {
+      document.querySelectorAll('[data-desk-label]').forEach(function (a) {
+        a.setAttribute('href', '#quote');
+        a.removeAttribute('data-phone');
+        a.textContent = a.getAttribute('data-desk-label');
+        if (a.getAttribute('data-desk-choose')) a.setAttribute('data-choose', a.getAttribute('data-desk-choose'));
+      });
+    }
+
     /* Ad-group keyword at the top of the page: add ?kw=machine (etc.) to the ad's final URL.
        Only these preset phrases can appear, never raw text from the URL. */
     var KW = {

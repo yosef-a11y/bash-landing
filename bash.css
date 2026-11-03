@@ -23,6 +23,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 90px; }
 body {
   margin: 0;
   background: var(--cream);
