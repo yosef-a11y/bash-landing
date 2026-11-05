@@ -46,6 +46,10 @@ var BASH_CONFIG = {
   'use strict';
   var C = BASH_CONFIG;
 
+  /* Computers (mouse, no touch) can't place calls: tag the page so phone-only items hide. */
+  var DESKTOP = !!(window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches);
+  if (DESKTOP) document.documentElement.classList.add('is-desktop');
+
   function isSet(v) {
     return v !== null && v !== undefined && v !== '' && !/X{4,}|YOUR_/.test(String(v));
   }
@@ -121,8 +125,7 @@ var BASH_CONFIG = {
 
     /* On computers (mouse, no touch) a "Call to..." button can't place a call, so the
        lower ones become form buttons. Phones and tablets keep calling. */
-    var desktop = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-    if (desktop) {
+    if (DESKTOP) {
       document.querySelectorAll('[data-desk-label]').forEach(function (a) {
         a.setAttribute('href', '#quote');
         a.removeAttribute('data-phone');
