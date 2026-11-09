@@ -6,6 +6,7 @@ Kickoff call: 10/29/26
 | Page | Path | Goal |
 | --- | --- | --- |
 | Soft serve (main product) | `soft-serve/` | Station or machine rental leads, corporate + personal |
+| Ice cream cart / station (full-service only) | `ice-cream-cart/` | Cart and station leads for corporate and private events, no machine rental |
 | Tables & chairs | `tables-chairs/` | Local rental leads within ~10 miles |
 | Thank-you | `thank-you/?type=softserve` or `?type=tables` | Fires the conversion |
 | Shared | `bash.css`, `bash.js` | Styles, tracking, form logic. **All IDs live in `BASH_CONFIG` at the top of `bash.js`.** |
@@ -67,7 +68,8 @@ Target CPA: **under $125**.
   | --- | --- | --- |
   | Soft serve machine rental | soft serve ice cream machine rental, soft serve machine rental | `/soft-serve/?kw=soft-serve-machine` |
   | Ice cream machine rental | ice cream machine rental, rent an ice cream machine | `/soft-serve/?kw=machine` |
-  | Ice cream cart rental | ice cream cart rental, ice cream cart for party | `/soft-serve/?kw=cart` |
+  | Ice cream cart rental | ice cream cart rental, ice cream cart for party | `/ice-cream-cart/?kw=cart` |
+  | Ice cream station / catering | ice cream station for events, ice cream catering, ice cream bar for party | `/ice-cream-cart/?kw=station` or `?kw=catering` |
   | Soft serve ice cream machine | soft serve ice cream machine (watch search terms: many are buyers) | `/soft-serve/?kw=soft-serve` |
   | Corporate | corporate ice cream catering, ice cream for office party | `/soft-serve/` |
   Only these preset `kw` values change the page. Anything else shows the default headline.

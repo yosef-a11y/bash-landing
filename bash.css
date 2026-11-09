@@ -17,7 +17,7 @@
   --white: #FFFFFF;
   --radius: 18px;
   --shadow: 0 10px 30px rgba(42, 26, 22, .08);
-  --display: "Fraunces", Georgia, serif;
+  --display: "DM Serif Display", Georgia, serif;
   --body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
@@ -40,7 +40,7 @@ img { max-width: 100%; display: block; }
 .header-phone { align-items: baseline; gap: 6px; font-size: .9rem; color: var(--ink-soft); margin-right: 6px; }
 .header-phone .num { font-weight: 700; font-size: 1.1rem; color: var(--ink); }
 a { color: var(--berry-dark); }
-h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.12; margin: 0 0 .5em; letter-spacing: -.01em; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.12; margin: 0 0 .5em; letter-spacing: -.01em; }
 h1 { font-size: clamp(2.2rem, 5.2vw, 3.6rem); }
 h2 { font-size: clamp(1.75rem, 3.6vw, 2.5rem); }
 h3 { font-size: 1.3rem; }
@@ -321,3 +321,6 @@ fieldset { border: 0; padding: 0; margin: 0 0 16px; }
   html { scroll-behavior: auto; }
   .btn { transition: none; }
 }
+
+/* DM Serif Display ships one weight: keep display text at 400 so browsers don't fake a bold. */
+h1, h2, h3, .brand, .stat b, .planner-out b, .guest-count, .hero-sub { font-weight: 400; }
