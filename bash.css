@@ -345,3 +345,5 @@ input[type="time"] { width: 100%; padding: 13px 14px; font: 1rem var(--body); co
 .rent-note { margin: 22px 0 0; color: var(--ink-soft); font-size: .95rem; }
 @media (max-width: 900px) { .rent-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 640px) { .rent-grid { gap: 12px; } .rent-card { padding: 16px 14px; } .rent-card h3 { font-size: 1.02rem; } .rent-card p, .rent-go { font-size: .86rem; } }
+.rent-call { margin-top: 12px; }
+.rent-phone .num { font-family: var(--display); font-size: 2rem; color: var(--ink); }
