@@ -229,27 +229,8 @@
     </div>
   </section>
 
-  <!-- PLANNER -->
-  <section class="section">
-    <div class="wrap planner">
-      <div>
-        <span class="eyebrow">Sizing your cart</span>
-        <h2>Size it in five seconds.</h2>
-        <p>Each machine on the cart pours 60 to 75 servings an hour. Slide to your guest count.</p>
-        <label for="guests">Guests: <span class="guest-count" id="guests-val">150</span></label>
-        <input type="range" id="guests" min="25" max="600" step="25" value="150">
-      </div>
-      <div class="planner-out" aria-live="polite">
-        <span class="eyebrow" style="color:var(--waffle)">You'll want</span>
-        <b id="machines">3 machines</b>
-        <p id="planner-note"></p>
-        <a data-desk-label="Get a quote for this" class="btn btn-primary btn-call" data-phone href="tel:+19549972251" style="margin-top:18px"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" fill="currentColor"/></svg> Call to book this</a>
-      </div>
-    </div>
-  </section>
-
   <!-- PROOF: STATS + GALLERY -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="wrap">
       <div class="stats">
         <div class="stat"><b>60–75</b><span>servings per hour, per machine</span></div>
@@ -271,7 +252,7 @@
   </section>
 
   <!-- HOW IT WORKS -->
-  <section class="section">
+  <section class="section section-alt">
     <div class="wrap">
       <div class="center">
         <span class="eyebrow">How it works</span>
@@ -310,72 +291,46 @@
         <input type="hidden" name="redirect" value="">
         <input type="hidden" name="lead_type" value="Ice cream cart">
         <input type="hidden" name="landing_page" value="">
-        <input type="hidden" name="planner_estimate" value="">
         <input type="hidden" name="gclid" value=""><input type="hidden" name="gbraid" value=""><input type="hidden" name="wbraid" value="">
         <input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_term" value=""><input type="hidden" name="utm_content" value="">
         <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <input type="hidden" name="service" value="Full-service ice cream cart">
 
+        <h3 class="form-h">Quote details</h3>
         <div class="form-row">
-          <div class="field"><label for="ss-name">Name</label><input type="text" id="ss-name" name="name" autocomplete="name" required></div>
-          <div class="field"><label for="ss-phone">Phone</label><input type="tel" id="ss-phone" name="phone" autocomplete="tel" required></div>
+          <div class="field"><label for="ss-name">Name</label><input type="text" id="ss-name" name="name" autocomplete="name" placeholder="Your name" required></div>
+          <div class="field"><label for="ss-company">Company / organization <span class="opt">(optional)</span></label><input type="text" id="ss-company" name="company" autocomplete="organization"></div>
         </div>
         <div class="form-row">
-          <div class="field"><label for="ss-email">Email</label><input type="email" id="ss-email" name="email" autocomplete="email" required></div>
-          <div class="field"><label for="ss-company">Company <span class="opt">(if corporate)</span></label><input type="text" id="ss-company" name="company" autocomplete="organization"></div>
+          <div class="field"><label for="ss-phone">Phone</label><input type="tel" id="ss-phone" name="phone" autocomplete="tel" placeholder="(000) 000-0000" required></div>
+          <div class="field"><label for="ss-email">Email</label><input type="email" id="ss-email" name="email" autocomplete="email" placeholder="you@email.com" required></div>
         </div>
+        <div class="field"><label for="ss-billing">Billing address <span class="opt">(optional)</span></label><input type="text" id="ss-billing" name="billing_address" autocomplete="street-address" placeholder="Street, city, state, ZIP"></div>
+        <div class="field"><label for="ss-venue">Delivery / event address <span class="opt">(optional)</span></label><input type="text" id="ss-venue" name="event_address" placeholder="Event venue address"></div>
         <div class="form-row">
           <div class="field">
-            <label for="ss-type">Event type <span class="opt">(optional)</span></label>
-            <select id="ss-type" name="event_type">
-              <option value="">Choose one</option>
-              <option>Corporate event</option>
-              <option>Birthday party</option>
-              <option>Bar / Bat Mitzvah</option>
-              <option>Upsherin</option>
-              <option>Wedding</option>
-              <option>School or community event</option>
-              <option>Other</option>
+            <label for="ss-service">What would you like to serve? <span class="opt">(optional)</span></label>
+            <select id="ss-service" name="service">
+              <option value="Full-service ice cream cart" selected>Full-service ice cream cart (we serve)</option>
+              <option value="Soft serve machine rental">Soft serve machine rental (you serve)</option>
+              <option value="Not sure yet">Not sure yet</option>
             </select>
           </div>
+          <div class="field"><label for="ss-guests">Number of guests <span class="opt">(optional)</span></label><input type="text" id="ss-guests" name="guests" inputmode="numeric" placeholder="Approx. guest count"></div>
+        </div>
+        <div class="form-row">
           <div class="field"><label for="ss-date">Event date <span class="opt">(optional)</span></label><input type="date" id="ss-date" name="event_date"></div>
+          <div class="field"><label for="ss-setup">Setup by <span class="opt">(optional)</span></label><input type="time" id="ss-setup" name="setup_by"><small class="hint">Time the station must be ready</small></div>
         </div>
         <div class="form-row">
-          <div class="field">
-            <label for="ss-guests">Guests <span class="opt">(optional)</span></label>
-            <select id="ss-guests" name="guests">
-              <option value="">Roughly how many?</option>
-              <option>Under 50</option>
-              <option>50 to 100</option>
-              <option>100 to 200</option>
-              <option>200 to 400</option>
-              <option>400+</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="ss-area">Event location <span class="opt">(optional)</span></label>
-            <select id="ss-area" name="county">
-              <option value="">Choose a county</option>
-              <option>Palm Beach</option>
-              <option>Broward</option>
-              <option>Miami-Dade</option>
-              <option>Somewhere else</option>
-            </select>
-          </div>
+          <div class="field"><label for="ss-start">Event start time <span class="opt">(optional)</span></label><input type="time" id="ss-start" name="start_time"></div>
+          <div class="field"><label for="ss-end">Event end time <span class="opt">(optional)</span></label><input type="time" id="ss-end" name="end_time"></div>
         </div>
-        <fieldset class="field">
-          <legend>Extras you're interested in <span class="opt">(optional)</span></legend>
-          <div class="checks-inline">
-            <label><input type="checkbox" name="extras[]" value="Logo cups & napkins"> Logo cups &amp; napkins</label>
-            <label><input type="checkbox" name="extras[]" value="Branded cart"> Branded cart</label>
-            <label><input type="checkbox" name="extras[]" value="Custom flavor"> Custom flavor</label>
-            <label><input type="checkbox" name="extras[]" value="Extra toppings"> Extra toppings</label>
-            <label><input type="checkbox" name="extras[]" value="Non-dairy"> Non-dairy</label>
-            <label><input type="checkbox" name="extras[]" value="Cotton candy"> Cotton candy</label>
-            <label><input type="checkbox" name="extras[]" value="Snow cones"> Snow cones</label>
-          </div>
-        </fieldset>
-        <div class="field"><label for="ss-notes">Anything else? <span class="opt">(optional)</span></label><textarea id="ss-notes" name="message" placeholder="Venue, indoor or outdoor, timing, theme..."></textarea></div>
+        <label class="check-row"><input type="checkbox" name="outdoors" value="Yes"> <span>This event is outdoors <small>(important: our machines are sensitive to heat)</small></span></label>
+
+        <h3 class="form-h">Additional info</h3>
+        <label class="check-row"><input type="checkbox" name="parve_vegan" value="Yes"> <span>I&rsquo;d like parve / vegan (non-dairy) options</span></label>
+        <label class="check-row"><input type="checkbox" name="non_profit" value="Yes"> <span>We are a non-profit organization</span></label>
+        <div class="field"><label for="ss-notes">Notes &amp; special requests <span class="opt">(optional)</span></label><textarea id="ss-notes" name="message" placeholder="Custom flavors, branding, specific toppings, allergies, or anything else we should know..."></textarea></div>
 
         <p class="form-min" data-min-wrap>Full-service carts start at <strong data-min="softServeStationFrom"></strong>, so we can bring the full setup to every event.</p>
         <button class="btn btn-primary btn-block" type="submit">Get my quote</button>
@@ -385,13 +340,13 @@
   </section>
 
   <!-- FAQ -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="wrap">
       <div class="center"><span class="eyebrow">Questions</span><h2>Good to know before you book.</h2></div>
       <div class="faq" style="margin-top:30px">
         <details><summary>Is it kosher?</summary><p>Yes. Everything is certified by the ORB, and our dairy soft serve is cholov yisroel. Non-dairy is available too.</p></details>
         <details><summary>Where do you serve?</summary><p>All of South Florida: Palm Beach, Broward and Miami-Dade counties. If you're just outside that, ask and we'll let you know.</p></details>
-        <details><summary>How many guests can one cart serve?</summary><p>Each machine pours 60 to 75 servings an hour and serves one flavor. For a bigger crowd or a second flavor, ask about a second machine.</p></details>
+        <details><summary>How many machines do I need?</summary><p>It depends on your guest count and how long you want to serve, not just the headcount. Fill in your guests and event times in the form and we&rsquo;ll recommend the right setup.</p></details>
         <details><summary>How long does the attendant stay?</summary><p>Up to 5 hours at no extra charge.</p></details>
         <details><summary>Can it go outside?</summary><p>In the cooler months, yes. In summer, South Florida humidity is too much for the machines, so summer setups are indoors.</p></details>
         <details><summary>What do you need from us?</summary><p>A table and a tablecloth. Each machine plugs into a standard outlet on its own circuit breaker, and we bring 50-foot extension cords, so the station doesn't have to sit against the wall. We bring everything else.</p></details>

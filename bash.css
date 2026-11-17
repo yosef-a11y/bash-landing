@@ -324,3 +324,12 @@ fieldset { border: 0; padding: 0; margin: 0 0 16px; }
 
 /* DM Serif Display ships one weight: keep display text at 400 so browsers don't fake a bold. */
 h1, h2, h3, .brand, .stat b, .planner-out b, .guest-count, .hero-sub { font-weight: 400; }
+
+/* Quote form, modelled on bashsoftserve.com/quote */
+.form-h { font-size: 1.25rem; margin: 4px 0 14px; }
+.form-h:not(:first-of-type) { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); }
+.hint { display: block; margin-top: 5px; font-size: .8rem; font-style: italic; color: var(--ink-soft); }
+.check-row { display: flex; gap: 10px; align-items: flex-start; border: 1.5px solid var(--line); border-radius: 12px; padding: 13px 14px; margin-bottom: 12px; background: var(--cream); cursor: pointer; font-size: .95rem; }
+.check-row input { margin-top: 3px; accent-color: var(--berry); width: 18px; height: 18px; flex: none; }
+.check-row small { color: var(--ink-soft); }
+input[type="time"] { width: 100%; padding: 13px 14px; font: 1rem var(--body); color: var(--ink); background: var(--cream); border: 1.5px solid var(--line); border-radius: 12px; }

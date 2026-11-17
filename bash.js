@@ -175,9 +175,9 @@ var BASH_CONFIG = {
     /* "Price a station" / "Price a machine" pre-select the form choice */
     document.querySelectorAll('[data-choose]').forEach(function (b) {
       b.addEventListener('click', function () {
-        var want = b.getAttribute('data-choose') === 'machine' ? 'Machine rental only' : 'Full-service station';
-        var r = document.querySelector('input[name="service"][value="' + want + '"]');
-        if (r) r.checked = true;
+        var want = b.getAttribute('data-choose') === 'machine' ? 'Soft serve machine rental' : 'Full-service ice cream cart';
+        var sel = document.querySelector('select[name="service"]');
+        if (sel) sel.value = want;
       });
     });
 
