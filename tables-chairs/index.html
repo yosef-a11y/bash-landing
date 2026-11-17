@@ -219,37 +219,38 @@
         <input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_term" value=""><input type="hidden" name="utm_content" value="">
         <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
+        <h3 class="form-h">Rental details</h3>
         <div class="form-row">
-          <div class="field"><label for="tc-name">Name</label><input type="text" id="tc-name" name="name" autocomplete="name" required></div>
-          <div class="field"><label for="tc-phone">Phone</label><input type="tel" id="tc-phone" name="phone" autocomplete="tel" required></div>
+          <div class="field"><label for="tc-name">Name</label><input type="text" id="tc-name" name="name" autocomplete="name" placeholder="Your name" required></div>
+          <div class="field"><label for="tc-phone">Phone</label><input type="tel" id="tc-phone" name="phone" autocomplete="tel" placeholder="(000) 000-0000" required></div>
         </div>
         <div class="form-row">
-          <div class="field"><label for="tc-email">Email</label><input type="email" id="tc-email" name="email" autocomplete="email" required></div>
-          <div class="field"><label for="tc-date">Event date <span class="opt">(optional)</span></label><input type="date" id="tc-date" name="event_date"></div>
+          <div class="field"><label for="tc-email">Email <span class="opt">(optional)</span></label><input type="email" id="tc-email" name="email" autocomplete="email" placeholder="you@email.com"></div>
+          <div class="field"><label for="tc-company">Company / organization <span class="opt">(optional)</span></label><input type="text" id="tc-company" name="company" autocomplete="organization"></div>
         </div>
+        <div class="field"><label for="tc-venue">Delivery / event address</label><input type="text" id="tc-venue" name="event_address" autocomplete="street-address" placeholder="Street, city, ZIP" required></div>
         <div class="form-row">
-          <div class="field"><label for="tc-zip">Delivery ZIP <span class="opt">(optional)</span></label><input type="text" id="tc-zip" name="delivery_zip" inputmode="numeric" maxlength="5" autocomplete="postal-code"></div>
           <div class="field">
-            <label for="tc-setup">Setup</label>
-            <select id="tc-setup" name="setup">
-              <option>Drop-off only</option>
-              <option>Drop-off plus setup &amp; takedown</option>
+            <label for="tc-service">What do you need?</label>
+            <select id="tc-service" name="service" required>
+              <option value="">Select one</option>
+              <option value="Tables and chairs">Tables &amp; chairs</option>
+              <option value="Tables, chairs and an ice cream cart">Tables, chairs &amp; an ice cream cart</option>
+              <option value="Not sure yet">Not sure yet</option>
             </select>
           </div>
+          <div class="field"><label for="tc-guests">Number of guests</label><input type="text" id="tc-guests" name="guests" inputmode="numeric" placeholder="Approx. guest count" required></div>
         </div>
-        <fieldset class="field">
-          <legend>What do you need? <span class="opt">(rough numbers are fine)</span></legend>
-          <div class="form-row">
-            <div class="field"><label for="tc-chairs">Adult chairs</label><input type="text" id="tc-chairs" name="adult_chairs" inputmode="numeric" placeholder="e.g. 60, folding"></div>
-            <div class="field"><label for="tc-tables">Tables</label><input type="text" id="tc-tables" name="tables" placeholder="e.g. 6 rounds, 2 six-foot"></div>
-          </div>
-          <div class="form-row">
-            <div class="field"><label for="tc-kchairs">Kids chairs</label><input type="text" id="tc-kchairs" name="kids_chairs" inputmode="numeric"></div>
-            <div class="field"><label for="tc-ktables">Kids tables</label><input type="text" id="tc-ktables" name="kids_tables" inputmode="numeric"></div>
-          </div>
-        </fieldset>
-        <div class="field"><label for="tc-notes">Anything else? <span class="opt">(optional)</span></label><textarea id="tc-notes" name="message" placeholder="Chair style, backyard or hall, timing..."></textarea></div>
-        <label class="checks-inline" style="margin-bottom:16px"><input type="checkbox" name="interested_soft_serve" value="Yes"> Also send me soft serve station pricing</label>
+        <div class="form-row">
+          <div class="field"><label for="tc-date">Event date</label><input type="date" id="tc-date" name="event_date" required></div>
+          <div class="field"><label for="tc-setup">Delivered by <span class="opt">(optional)</span></label><input type="time" id="tc-setup" name="setup_by"><small class="hint">Time everything must be there</small></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="tc-start">Event start time</label><input type="time" id="tc-start" name="start_time" required></div>
+          <div class="field"><label for="tc-end">Event end time</label><input type="time" id="tc-end" name="end_time" required></div>
+        </div>
+        <div class="field"><label for="tc-notes">Notes &amp; special requests <span class="opt">(optional)</span></label><textarea id="tc-notes" name="message" placeholder="Chair style, backyard or hall, anything else we should know..."></textarea></div>
+
         <p class="form-min" data-min-wrap>Minimum order for delivery: <strong data-min="tablesOrderMinimum"></strong>.</p>
         <button class="btn btn-primary btn-block" type="submit">Check availability</button>
         <p class="form-note">We reply fast. No spam, no mailing list.</p>

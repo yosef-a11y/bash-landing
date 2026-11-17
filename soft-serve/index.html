@@ -301,39 +301,33 @@
         <h3 class="form-h">Quote details</h3>
         <div class="form-row">
           <div class="field"><label for="ss-name">Name</label><input type="text" id="ss-name" name="name" autocomplete="name" placeholder="Your name" required></div>
+          <div class="field"><label for="ss-phone">Phone</label><input type="tel" id="ss-phone" name="phone" autocomplete="tel" placeholder="(000) 000-0000" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="ss-email">Email <span class="opt">(optional)</span></label><input type="email" id="ss-email" name="email" autocomplete="email" placeholder="you@email.com"></div>
           <div class="field"><label for="ss-company">Company / organization <span class="opt">(optional)</span></label><input type="text" id="ss-company" name="company" autocomplete="organization"></div>
         </div>
-        <div class="form-row">
-          <div class="field"><label for="ss-phone">Phone</label><input type="tel" id="ss-phone" name="phone" autocomplete="tel" placeholder="(000) 000-0000" required></div>
-          <div class="field"><label for="ss-email">Email</label><input type="email" id="ss-email" name="email" autocomplete="email" placeholder="you@email.com" required></div>
-        </div>
-        <div class="field"><label for="ss-billing">Billing address <span class="opt">(optional)</span></label><input type="text" id="ss-billing" name="billing_address" autocomplete="street-address" placeholder="Street, city, state, ZIP"></div>
-        <div class="field"><label for="ss-venue">Delivery / event address <span class="opt">(optional)</span></label><input type="text" id="ss-venue" name="event_address" placeholder="Event venue address"></div>
+        <div class="field"><label for="ss-venue">Delivery / event address</label><input type="text" id="ss-venue" name="event_address" autocomplete="street-address" placeholder="Street, city, ZIP" required></div>
         <div class="form-row">
           <div class="field">
-            <label for="ss-service">What would you like to serve? <span class="opt">(optional)</span></label>
-            <select id="ss-service" name="service">
+            <label for="ss-service">What would you like to serve?</label>
+            <select id="ss-service" name="service" required>
               <option value="">Select a service</option>
               <option value="Full-service ice cream cart">Full-service ice cream cart (we serve)</option>
               <option value="Soft serve machine rental">Soft serve machine rental (you serve)</option>
               <option value="Not sure yet">Not sure yet</option>
             </select>
           </div>
-          <div class="field"><label for="ss-guests">Number of guests <span class="opt">(optional)</span></label><input type="text" id="ss-guests" name="guests" inputmode="numeric" placeholder="Approx. guest count"></div>
+          <div class="field"><label for="ss-guests">Number of guests</label><input type="text" id="ss-guests" name="guests" inputmode="numeric" placeholder="Approx. guest count" required></div>
         </div>
         <div class="form-row">
-          <div class="field"><label for="ss-date">Event date <span class="opt">(optional)</span></label><input type="date" id="ss-date" name="event_date"></div>
+          <div class="field"><label for="ss-date">Event date</label><input type="date" id="ss-date" name="event_date" required></div>
           <div class="field"><label for="ss-setup">Setup by <span class="opt">(optional)</span></label><input type="time" id="ss-setup" name="setup_by"><small class="hint">Time the station must be ready</small></div>
         </div>
         <div class="form-row">
-          <div class="field"><label for="ss-start">Event start time <span class="opt">(optional)</span></label><input type="time" id="ss-start" name="start_time"></div>
-          <div class="field"><label for="ss-end">Event end time <span class="opt">(optional)</span></label><input type="time" id="ss-end" name="end_time"></div>
+          <div class="field"><label for="ss-start">Event start time</label><input type="time" id="ss-start" name="start_time" required></div>
+          <div class="field"><label for="ss-end">Event end time</label><input type="time" id="ss-end" name="end_time" required></div>
         </div>
-        <label class="check-row"><input type="checkbox" name="outdoors" value="Yes"> <span>This event is outdoors <small>(important: our machines are sensitive to heat)</small></span></label>
-
-        <h3 class="form-h">Additional info</h3>
-        <label class="check-row"><input type="checkbox" name="parve_vegan" value="Yes"> <span>I&rsquo;d like parve / vegan (non-dairy) options</span></label>
-        <label class="check-row"><input type="checkbox" name="non_profit" value="Yes"> <span>We are a non-profit organization</span></label>
         <div class="field"><label for="ss-notes">Notes &amp; special requests <span class="opt">(optional)</span></label><textarea id="ss-notes" name="message" placeholder="Custom flavors, branding, specific toppings, allergies, or anything else we should know..."></textarea></div>
 
         <p class="form-min" data-min-wrap>Full-service carts start at <strong data-min="softServeStationFrom"></strong>, so we can bring the full setup to every event.</p>
