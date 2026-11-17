@@ -333,3 +333,15 @@ h1, h2, h3, .brand, .stat b, .planner-out b, .guest-count, .hero-sub { font-weig
 .check-row input { margin-top: 3px; accent-color: var(--berry); width: 18px; height: 18px; flex: none; }
 .check-row small { color: var(--ink-soft); }
 input[type="time"] { width: 100%; padding: 13px 14px; font: 1rem var(--body); color: var(--ink); background: var(--cream); border: 1.5px solid var(--line); border-radius: 12px; }
+
+/* More rentals */
+.rent-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 34px; }
+.rent-card { position: relative; padding: 22px; }
+.rent-card h3 { font-size: 1.15rem; }
+.rent-card p { font-size: .93rem; color: var(--ink-soft); margin: 0; }
+.rent-link { text-decoration: none; color: inherit; border-color: var(--berry); }
+.rent-go { display: inline-block; margin-top: 10px; font-weight: 700; font-size: .92rem; color: var(--berry-dark); }
+.soon { position: absolute; top: -11px; right: 16px; background: var(--gold); color: var(--ink); font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
+.rent-note { margin: 22px 0 0; color: var(--ink-soft); font-size: .95rem; }
+@media (max-width: 900px) { .rent-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .rent-grid { gap: 12px; } .rent-card { padding: 16px 14px; } .rent-card h3 { font-size: 1.02rem; } .rent-card p, .rent-go { font-size: .86rem; } }
