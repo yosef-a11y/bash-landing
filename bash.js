@@ -143,7 +143,8 @@ var BASH_CONFIG = {
       'soft-serve': 'Soft serve ice cream machine',
       'station': 'Ice cream station for events',
       'catering': 'Ice cream catering',
-      'cart-events': 'Ice cream cart for events'
+      'cart-events': 'Ice cream cart for events',
+      'bar': 'Ice cream bar rental'
     };
     var kw = KW[params.get('kw')];
     if (kw) document.querySelectorAll('[data-kw]').forEach(function (el) { el.textContent = kw; });

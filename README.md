@@ -69,6 +69,7 @@ Target CPA: **under $125**.
   | Soft serve machine rental | soft serve ice cream machine rental, soft serve machine rental | `/soft-serve/?kw=soft-serve-machine` |
   | Ice cream machine rental | ice cream machine rental, rent an ice cream machine | `/soft-serve/?kw=machine` |
   | Ice cream cart rental | ice cream cart rental, ice cream cart for party | `/ice-cream-cart/?kw=cart` |
+  | Ice cream bar rental | ice cream bar rental, ice cream bar for party | `/ice-cream-cart/?kw=bar` |
   | Ice cream station / catering | ice cream station for events, ice cream catering, ice cream bar for party | `/ice-cream-cart/?kw=station` or `?kw=catering` |
   | Soft serve ice cream machine | soft serve ice cream machine (watch search terms: many are buyers) | `/soft-serve/?kw=soft-serve` |
   | Corporate | corporate ice cream catering, ice cream for office party | `/soft-serve/` |
